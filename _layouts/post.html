@@ -203,12 +203,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div class="bb-user-avatar-wrap">
 <div class="avatar-wrap">
 <a href="{{site.baseurl}}">
-<img alt="" src="/images/{{site.author-image}}" srcset="{{site.author-image}} 2x" class="avatar avatar-80 photo" height="80" width="80" loading="lazy"> </a>
+<img alt="" src="https://images-ext-2.discordapp.net/external/nHve3xqrbXMbrd3Wf8-5YgpOq-4QTovOWd2Vc0uuZI8/https/cdn.discordapp.com/avatars/977262952354828308/fd708668207c7e4b9f10b82ea5bf0830.webp?format=webp&width=160&height=160" srcset="https://images-ext-2.discordapp.net/external/nHve3xqrbXMbrd3Wf8-5YgpOq-4QTovOWd2Vc0uuZI8/https/cdn.discordapp.com/avatars/977262952354828308/fd708668207c7e4b9f10b82ea5bf0830.webp?format=webp&width=160&height=160 2x" class="avatar avatar-80 photo" height="80" width="80" loading="lazy"> </a>
 </div>
 <div class="meta-wrap">
-<strong></strong><a class="post-author" href="{{site.baseurl}}/about">
-{{site.author-name}} </a></strong>
-<span class="post-date">{{site.author-job}}</span>
+<strong></strong><a class="post-author" href="">
+MuxBots HQ </a></strong>
+<span class="post-date">Discord Bots & More</span>
 </div>
 </div>
 <div class="push-right flex align-items-center top-meta">
@@ -217,42 +217,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </div>
 </div>
 </div>
-<div class="entry-content">
-{{page.content | markdownify}}
-      <div class="c-article__footer u-clearfix">
-        <div class="c-article__tag">
-          {% for tag in page.tags %}
-          <a href="{{site.baseurl}}/tags#{{tag}}">&#35; {{ tag }}</a>
-          {% endfor %}
-        </div>
-        <h4 class="c-recent__title">Share</h4>
-        <div class="c-article__share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" title="Share
-          on Twitter" rel="nofollow" target="_blank"><div data-icon='ei-sc-twitter' data-size='s'></div></a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><div data-icon='ei-sc-facebook' data-size='s'></div></a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><div data-icon='ei-sc-google-plus' data-size='s'></div></a>
-        </div>
-      </div>
-      <div class="c-recent-post">
-        <h4 class="c-recent__title">You might also enjoy</h4>
-        <div class="c-recent__box">
-        {% for post in site.related_posts limit:4 %}
-        {% if post.image %}
-          <div class="c-recent__item">
-            <a class="c-recent__image" href="{{ post.url }}" style="background-image: url( {{"/images/" | prepend: site.baseurl | append: post.image}})"></a>
-            <div class="c-recent__footer">
-              <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-              <div class="c-recent__date">
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%B %-d, %Y"}}</time>
-              </div>
-            </div>
-          </div>
-        {% else %}
-        {% endif %}
-        {% endfor %}
-        </div>
-      </div>
-</div>
+
 </div>
 </article>
 
